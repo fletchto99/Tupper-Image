@@ -4,9 +4,7 @@ import java.math.BigInteger;
 
 public class Constants {
 
-    public static final BigInteger TUPPER_BINARY_CONSTANT = new BigInteger(
-            "10001", 2);
-    public static final BigInteger TUPPER_INTEGER_CONSTANT = new BigInteger(
+    public static final BigInteger TUPPER_CONSTANT = new BigInteger(
             "17");
     public static final int TUPPER_HEIGHT = 17;
     public static final int TUPPER_WIDTH = 106;

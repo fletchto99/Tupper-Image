@@ -22,13 +22,14 @@ public class ImageAnalyzer {
                 || image.getWidth() != Constants.TUPPER_WIDTH) {
             return false;
         }
+
         for (int x = 0; x < image.getWidth(); x++) {
             for (int y = 0; y < image.getHeight(); y++) {
                 final int rgb = image.getRGB(x, y);
+                System.out.println("x: " + x + "y:" + y + rgb);
                 if (rgb == 0xFFFFFFFF || rgb == 0xFF000000) {
                     continue;
                 }
-                System.out.println("x: " + x + "y:" + y + rgb);
                 return false;
             }
         }

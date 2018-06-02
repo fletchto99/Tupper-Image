@@ -12,7 +12,7 @@ public class TupperEncoder {
             throw new EncoderException();
         }
         String binaryString = new BigInteger(tupperValue).divide(
-                Constants.TUPPER_INTEGER_CONSTANT).toString(2);
+                Constants.TUPPER_CONSTANT).toString(2);
         if (binaryString.length() < Constants.TUPPER_BINARY_POWER) {
             while (binaryString.length() < 1802) {
                 binaryString = "0" + binaryString;

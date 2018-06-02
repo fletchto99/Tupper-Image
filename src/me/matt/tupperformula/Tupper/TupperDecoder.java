@@ -7,19 +7,17 @@ import me.matt.tupperformula.image.ImageAnalyzer;
 
 public class TupperDecoder {
 
-    private final BigInteger binaryImage;
+    private final String binaryRepresentation;
 
     public TupperDecoder(final BufferedImage image) {
-        binaryImage = new BigInteger(ImageAnalyzer.toBinaryString(image), 2);
+        binaryRepresentation = ImageAnalyzer.toBinaryString(image);
     }
 
     public String binaryRepresentation() {
-        return binaryImage.toString(2);
+        return binaryRepresentation;
     }
 
     public String decode() {
-        return "k = "
-                + binaryImage.multiply(Constants.TUPPER_BINARY_CONSTANT)
-                        .toString();
+        return "k = "  + new BigInteger(binaryRepresentation, 2).multiply(Constants.TUPPER_CONSTANT).toString();
     }
 }
